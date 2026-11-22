@@ -1,0 +1,66 @@
+
+/* Smooth Animation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ปุ่ม */
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* การ์ดคุณสมบัติ */
+.card, .step, .bin {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.card:hover,
+.step:hover,
+.bin:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px #00bfff33;
+    border-color: #00d9ff;
+}
+
+/* ภาพสินค้า */
+.product-frame {
+    animation: floatProduct 6s ease-in-out infinite;
+}
+
+@keyframes floatProduct {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* เมนู */
+.links a {
+    transition: color 0.3s ease;
+}
+
+/* หน้าต่างสั่งซื้อ */
+.modal {
+    animation: modalOpen 0.3s ease;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* แจ้งเตือน */
+.toast {
+    transition: all 0.25s ease;
+}
